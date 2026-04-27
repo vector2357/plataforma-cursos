@@ -499,6 +499,7 @@ document.getElementById('form-plano').addEventListener('submit', function (e) {
   DB.planos.push(new Plano(nome, desc, +preco, +dur));
   this.reset(); toast('Plano criado!'); renderPlanos(); populateSelects();
 });
+
 function renderPlanos() {
   const tb = document.getElementById('tb-planos');
   if (!DB.planos.length) { tb.innerHTML = emptyRow(6); return; }
